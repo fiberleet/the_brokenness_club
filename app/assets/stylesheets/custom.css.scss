@@ -1,0 +1,241 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Navbar */
+body {
+    background: rgba(0, 0, 0, 0);
+}
+
+.navbar.navbar-static-top{
+	background-color: rgba(0,0,0, 0.5);
+	border-bottom-width: 1px;
+	border-color: white;
+	color: white;
+	.logo{
+		filter: invert(100%);
+		padding: 0px 15px;
+		float: left;
+	}
+	.navbar-brand{
+		color: white;
+	}
+	.navbar-brand:hover{
+		color: lightblue;
+	}
+}
+#log-in-button{
+	color: white;
+	float: right;
+}
+#log-in-button:hover{
+	color: lightblue;
+}
+
+/* Home Page */
+.top-half-page{
+	background: url(4238051-background.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height:100%;
+    margin-top: -100px;
+    padding-top: 100px;
+}
+
+.jumbotron {
+	background: rgba(0, 0, 0, 0);
+	color: white;
+	h1 {
+		font-size: 50px;
+		font-weight: bold;
+		color: white;
+	}
+	p{
+		margin-bottom: 30px;
+	}
+	.btn{
+		background-color: rgba(0,0,0,.5);
+		border-color: white;
+		border-width: 5px;
+		font-size: 30px;
+		box-shadow: 10px 5px 5px black;
+		border-radius: 0px;
+	}
+	.btn:hover{
+		border-color: lightblue;
+		color: lightblue;
+	}
+	#buttons-panel{
+		margin-top: 0;
+		box-shadow: none;
+	}
+
+}
+
+#section-1{
+	padding: 20px;
+	max-width: 1170px;
+	background-color: #d9d9d9;
+	text-align: center;
+	#shuttle{
+		float: left;
+		height: 300px;
+		overflow: hidden;
+		background-image: url(space-shuttle_800x400.jpg);
+		background-position: center;
+		background-size: cover;
+	}
+	p{
+		text-align: left;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#section-1{
+		color: white;
+		background-color: white;
+		padding: 20px 0px;
+		h1{
+			margin-top: -250px;
+		}
+		p{
+			margin-top: -200px;
+			padding: 0px 20px;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+    .jumbotron{
+    	margin-bottom: 150px;
+    }
+    .bottom-half-home-page .bottom-panels{
+    	min-height: 270px;
+    }
+}
+
+.center {
+	text-align: center;
+}
+
+
+
+.panel{
+	background-color: rgba(0,0,0,0);
+	border-width: 0;
+	text-align: center;
+	color: black;
+}
+
+/* Panel Group */
+@media only screen and (max-width: 768px) {
+    .bottom-half-home-page .bottom-panels{
+    	min-height: 200px;
+    }
+}
+
+.bottom-half-home-page{
+	background-color: grey;
+	padding: 0;
+
+	.panel.panel-default.col-sm-6{
+		margin-top: 0;
+	}
+
+	.panel.panel-default.col-sm-3{
+		margin-top: 0;
+	}
+
+	.bottom-panels.panel{
+		padding: 0;
+		padding-bottom: 0px;
+		background-color: rgba(0,0,0,0);
+		border-radius: 0;
+		border-color: black;
+	}
+	.bottom-panels .panel-heading{
+		border-radius: 0;
+		background-color: rgba(0,0,0,0);
+		font-size: 30px;
+	}
+
+	#mission{
+		background: url(space-shuttle_800x400.jpg);
+		background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size:  cover;
+        -o-background-size:  cover;
+        height:100%;
+		color: white;
+		text-shadow: 2px 2px #000000;
+		.panel-heading{
+			color: white;
+		}
+	}
+
+	#testimonials{
+		background: url(ski-track_800x400.jpg);
+		background-position: center;
+        background-repeat: no-repeat;
+        background-size:  cover;
+        -webkit-background-size:  cover;
+        -moz-background-size:  cover;
+        -o-background-size:  cover;
+        height:100%;
+		color: white;
+		text-shadow: 2px 2px #000000;
+		.panel-heading{
+			color: white;
+		}
+	}
+
+	#about_us{
+		background: url(bible_800x400.jpg);
+		background-position: center;
+        background-repeat: no-repeat;
+        background-size:  cover;
+        -webkit-background-size:  cover;
+        -moz-background-size:  cover;
+        -o-background-size:  cover;
+        height:100%;
+		color: white;
+		text-shadow: 2px 2px #000000;
+		.panel-heading{
+			color: white;
+		}
+	}
+
+	#blog_panel{
+		background: url(forest_800x400.jpg);
+		background-position: center;
+        background-repeat: no-repeat;
+        background-size:  cover;
+        -webkit-background-size:  cover;
+        -moz-background-size:  cover;
+        -o-background-size:  cover;
+        height:100%;
+		color: white;
+		text-shadow: 2px 2px #000000;
+		.panel-heading{
+			color: white;
+		}
+	}
+
+}
+/* Footer */
+
+footer.footer{
+	font-size: 10px;
+	background-color: white;
+	padding-top: 50px;
+}
+
+/* Debug */
+.debug_dump{
+	float: left;
+}
