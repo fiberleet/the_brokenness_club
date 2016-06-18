@@ -3,10 +3,10 @@
 
 /* Navbar */
 body {
-    background: rgba(0, 0, 0, 0);
+    background-color: #edefed;
 }
 
-.navbar.navbar-static-top{
+.navbar.navbar-fixed-top{
 	background-color: rgba(0,0,0, 0.5);
 	border-bottom-width: 1px;
 	border-color: white;
@@ -20,7 +20,7 @@ body {
 		padding-right: 0;
 	}
 	.navbar-brand:hover{
-		color: lightblue;
+		color: #007ee5;
 	}
 }
 #log-in-button{
@@ -28,7 +28,7 @@ body {
 	float: right;
 }
 #log-in-button:hover{
-	color: lightblue;
+	color: #007ee5;
 }
 
 /* Home Page */
@@ -42,7 +42,7 @@ body {
         -o-background-size: cover;
         height:100%;
     margin-top: -100px;
-    padding-top: 100px;
+    padding-top: 200px;
 }
 
 .jumbotron {
@@ -52,60 +52,32 @@ body {
 		font-size: 50px;
 		font-weight: bold;
 		color: white;
+		text-transform: uppercase;
 	}
 	p{
 		margin-bottom: 30px;
+		font-weight: bold;
 	}
 	.btn{
 		background-color: rgba(0,0,0,.5);
 		border-color: white;
 		border-width: 5px;
+		color: white;
 		font-size: 30px;
 		box-shadow: 10px 5px 5px black;
 		border-radius: 0px;
+		min-width: 175px;
 	}
 	.btn:hover{
-		border-color: lightblue;
-		color: lightblue;
+		background-color: rgba(0,0,0,.5);
+		border-color: #007ee5;
+		color: #007ee5;
 	}
 	#buttons-panel{
 		margin-top: 0;
 		box-shadow: none;
 	}
 
-}
-
-#section-1{
-	padding: 20px;
-	max-width: 1170px;
-	background-color: #d9d9d9;
-	text-align: center;
-	#shuttle{
-		float: left;
-		height: 300px;
-		overflow: hidden;
-		background-image: url('<%= asset_path("space-shuttle_800x400.jpg") %>');
-		background-position: center;
-		background-size: cover;
-	}
-	p{
-		text-align: left;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	#section-1{
-		color: white;
-		background-color: white;
-		padding: 20px 0px;
-		h1{
-			margin-top: -250px;
-		}
-		p{
-			margin-top: -200px;
-			padding: 0px 20px;
-		}
-	}
 }
 
 @media screen and (min-width: 768px) {
@@ -130,6 +102,156 @@ body {
 	color: black;
 }
 
+/* Mission */
+.btn{
+	background-color: rgba(0,0,0,0);
+	border-radius: 0px;
+	border-width: 5px;
+	border-color: black;
+	color: black;
+}
+.btn:hover{
+	background-color: rgba(0,0,0,0);
+	border-color: #007ee5;
+	color: #007ee5;
+}
+
+#section-1{
+	padding: 20px;
+	max-width: 1170px;
+	background-color: white;
+	text-align: center;
+	#shuttle{
+		float: left;
+		height: 300px;
+		overflow: hidden;
+		background-image: url('<%= asset_path("space-shuttle_800x400.jpg") %>');
+		background-position: center;
+		background-size: cover;
+	}
+	p{
+		padding: 20px 20px;
+		text-align: left;
+		font-size: 18px;
+	}
+	h1{
+		font-weight: bold;
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#section-1{
+		#shuttle{
+			display: none;
+		}
+		margin-top: 20px;
+		float: left;
+		height: 300px;
+		overflow: hidden;
+		background-image: url('<%= asset_path("space-shuttle_800x400.jpg") %>');
+		background-position: center;
+		background-size: cover;
+		color: white;
+		background-color: white;
+		padding: 20px 0px;
+		p{
+			padding: 20px 20px;
+
+		}
+		.btn{
+			background-color: rgba(0,0,0,0.5);
+			color: white;
+			border-color: white;
+		}
+		.btn:hover{
+			background-color: rgba(0,0,0,0.5);
+			border-color: #007ee5;
+			color: #007ee5;
+		}
+	}
+}
+
+/* Reach Out */
+#reach-out{
+	padding: 0px;
+
+	text-align: center;
+	h2{
+		padding-top: 20px;
+		font-weight: bold;
+	}
+	p{
+		font-family: 'Arima Madurai', cursive;
+		font-size: 20px;
+		padding: 30px;
+		text-align: left;
+	}
+}
+#umbrella{
+	height: 600px;
+	background-image: url('<%= asset_path("umbrella-170962_1920.jpg") %>');
+	background-position: center;
+	background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+	 #reach-out{
+	 	.poe-quote{
+	 			height: 600px;
+				background-image: url('<%= asset_path("umbrella-170962_1920.jpg") %>');
+				background-position: center;
+				background-size: cover;
+	 	}
+	 }
+	 #umbrella{
+		display: none;
+	 }
+
+}
+
+#section{
+	padding-top: 20px;
+	text-align: center;
+	h2{
+		font-weight: bold;
+	}
+}
+
+#worried-girl{
+	background-image: url('<%= asset_path("worried-girl.jpg") %>');
+	background-position: center;
+	background-size: cover;
+	min-height: 500px;
+	margin: 0;
+	.container{
+		max-width: 900px
+	}
+}
+
+#share-your-story{
+	text-align: center;
+	padding: 30px;
+	max-width: 400px;
+	float: right;
+	p{
+		font-family: 'Arima Madurai', cursive;
+		font-size: 25px;
+		padding-bottom: 15px;
+	}
+	.btn{
+
+	}
+}
+
+@media screen and (max-width: 768px) {
+	 #share-your-story{
+		p{
+			font-size: 20px;
+			font-size: 3.5vw;
+		}
+	}
+}
 /* Panel Group */
 @media screen and (max-width: 768px) {
     .bottom-half-home-page .bottom-panels{
