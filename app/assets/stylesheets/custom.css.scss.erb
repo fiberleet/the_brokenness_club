@@ -6,32 +6,47 @@ body {
     background-color: #edefed;
 }
 
-.navbar.navbar-fixed-top{
+.navbar.navbar-static-top{
 	background-color: rgba(0,0,0, 0.5);
 	border-bottom-width: 1px;
 	border-color: white;
 	color: white;
-	.logo{
-		padding: 0px 15px;
-		float: left;
-	}
+	height: 50px;
 	.navbar-brand{
+		font-family: 'Archivo Narrow', sans-serif;
+		font-weight: bold;
 		color: white;
-		padding-right: 0;
+		float: right;
+		margin-left: 0px;
+		padding: 15px 0px;
 	}
 	.navbar-brand:hover{
-		color: #007ee5;
+		color: #685195;
 	}
+}
+#nav-list{
+	margin: 0px;
 }
 #log-in-button{
 	color: white;
 	float: right;
+	padding: 15px;
 }
 #log-in-button:hover{
-	color: #007ee5;
+	color: #685195;
 }
 
+#logo{
+	float: left;
+	width: 55px;
+	padding-right: 5px;
+}
 /* Home Page */
+p{
+	font-family: 'Slabo 27px', serif;
+	font-size: 20px;
+	text-align: left;
+}
 .top-half-page{
 	background: url('<%= asset_path("4238051-background.jpg") %> ');
         background-position: center;
@@ -43,6 +58,9 @@ body {
         height:100%;
     margin-top: -100px;
     padding-top: 200px;
+    border-bottom-width: 3px;
+    border-bottom-color: #685195;
+    border-bottom-style: solid;
 }
 
 .jumbotron {
@@ -54,9 +72,12 @@ body {
 		color: white;
 		text-transform: uppercase;
 	}
-	p{
+	h2{
+		line-height: 1.5em;
 		margin-bottom: 30px;
 		font-weight: bold;
+		font-size: 20px;
+		border: none;
 	}
 	.btn{
 		background-color: rgba(0,0,0,.5);
@@ -70,8 +91,12 @@ body {
 	}
 	.btn:hover{
 		background-color: rgba(0,0,0,.5);
-		border-color: #007ee5;
-		color: #007ee5;
+		border-color: #685195;
+		color: white;
+	}
+	.panel-group{
+		max-width: 1000px;
+		margin: auto;
 	}
 	#buttons-panel{
 		margin-top: 0;
@@ -101,7 +126,32 @@ body {
 	text-align: center;
 	color: black;
 }
-
+h2{
+	padding-top: 20px;
+	font-weight: bold;
+	width: 100%; 
+	text-align: center; 
+	border-bottom: 1px solid #000; 
+	line-height: 0.1em;
+	margin: 10px 0 20px;
+}
+h2 span { 
+    background:#edefed; 
+    padding:0 10px; 
+}
+h5{
+	margin: auto;
+	width: 50%;
+	padding: 20px;
+	line-height: 1.2em;
+}
+@media screen and (max-width: 768px) {
+	h5{
+		margin: auto;
+		width: 80%;
+		padding: 20px;
+	}
+}
 /* Mission */
 .btn{
 	background-color: rgba(0,0,0,0);
@@ -112,8 +162,8 @@ body {
 }
 .btn:hover{
 	background-color: rgba(0,0,0,0);
-	border-color: #007ee5;
-	color: #007ee5;
+	border-color: #685195;
+	color: black;
 }
 
 #section-1{
@@ -121,11 +171,12 @@ body {
 	max-width: 1170px;
 	background-color: white;
 	text-align: center;
+	height: auto;
 	#shuttle{
-		float: left;
 		height: 300px;
+		float: left;
 		overflow: hidden;
-		background-image: url('<%= asset_path("space-shuttle_800x400.jpg") %>');
+		background-image: url('<%= asset_path("compass.jpg") %>');
 		background-position: center;
 		background-size: cover;
 	}
@@ -145,11 +196,11 @@ body {
 		#shuttle{
 			display: none;
 		}
+		display: block;
 		margin-top: 20px;
-		float: left;
-		height: 300px;
+		height: 340px;
 		overflow: hidden;
-		background-image: url('<%= asset_path("space-shuttle_800x400.jpg") %>');
+		background-image: url('<%= asset_path("compass.jpg") %>');
 		background-position: center;
 		background-size: cover;
 		color: white;
@@ -157,60 +208,56 @@ body {
 		padding: 20px 0px;
 		p{
 			padding: 20px 20px;
-
 		}
 		.btn{
-			background-color: rgba(0,0,0,0.5);
 			color: white;
 			border-color: white;
 		}
 		.btn:hover{
-			background-color: rgba(0,0,0,0.5);
-			border-color: #007ee5;
-			color: #007ee5;
+			border-color: #685195;
 		}
 	}
 }
 
 /* Reach Out */
-#reach-out{
+#get-help{
 	padding: 0px;
-
+	padding-top: 20px;
 	text-align: center;
-	h2{
-		padding-top: 20px;
-		font-weight: bold;
-	}
 	p{
-		font-family: 'Arima Madurai', cursive;
+		width: 75%;
+		margin: auto;
+		color: white;
 		font-size: 20px;
 		padding: 30px;
-		text-align: left;
+	}
+	.btn{
+		border-color: white;
+		color: white;
+	}
+	.btn:hover{
+		border-color: #685195;
 	}
 }
 #umbrella{
 	height: 600px;
+	width: 60%;
+	margin: auto;
 	background-image: url('<%= asset_path("umbrella-170962_1920.jpg") %>');
 	background-position: center;
 	background-size: cover;
 }
 
 @media screen and (max-width: 768px) {
-	 #reach-out{
-	 	.poe-quote{
-	 			height: 600px;
-				background-image: url('<%= asset_path("umbrella-170962_1920.jpg") %>');
-				background-position: center;
-				background-size: cover;
+	#umbrella{
+	 	width: 100%;
+	 	p{
+	 		width: 90%;
 	 	}
-	 }
-	 #umbrella{
-		display: none;
-	 }
-
+	}
 }
 
-#section{
+#give-help{
 	padding-top: 20px;
 	text-align: center;
 	h2{
@@ -219,36 +266,44 @@ body {
 }
 
 #worried-girl{
-	background-image: url('<%= asset_path("worried-girl.jpg") %>');
+	background-image: url('<%= asset_path("worried-girl-darker.jpg") %>');
 	background-position: center;
 	background-size: cover;
-	min-height: 500px;
+	height: 500px;
 	margin: 0;
-	.container{
-		max-width: 900px
-	}
 }
-
-#share-your-story{
+#share-your-story-container{
+	max-width: 600px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#share-your-story-text{
 	text-align: center;
 	padding: 30px;
-	max-width: 400px;
+
+	max-width: 300px;
 	float: right;
+	color: white;
 	p{
-		font-family: 'Arima Madurai', cursive;
-		font-size: 25px;
-		padding-bottom: 15px;
+		padding-bottom: 30px;
 	}
 	.btn{
-
+		color: white;
+		border-color: white;
+	}
+	.btn:hover{
+		border-color: #685195;
 	}
 }
 
 @media screen and (max-width: 768px) {
-	 #share-your-story{
+	 #share-your-story-text{
+	 	padding:30px 0;
 		p{
 			font-size: 20px;
-			font-size: 3.5vw;
 		}
 	}
 }
