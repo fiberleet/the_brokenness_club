@@ -12,6 +12,7 @@ body {
 	border-color: white;
 	color: white;
 	height: 50px;
+	margin-bottom: 0px;
 	.navbar-brand{
 		font-family: 'Archivo Narrow', sans-serif;
 		font-weight: bold;
@@ -324,10 +325,14 @@ h5{
     }
 }
 
-.bottom-half-home-page{
-	background-color: grey;
+.bottom-half-about-page{
+	background-color: white;
 	padding: 0;
+	max-width: 1200px;
 
+	.panel-body{
+		text-align: left;
+	}
 	.panel.panel-default.col-sm-6{
 		margin-top: 0;
 	}
@@ -342,77 +347,13 @@ h5{
 		background-color: transparent;
 		border-radius: 0;
 		border-color: black;
+		height: 260px;
 	}
 	.bottom-panels .panel-heading{
 		border-radius: 0;
 		background-color: transparent;
 		font-size: 30px;
 	}
-
-	#mission{
-		background: url(space-shuttle_800x400.jpg);
-		background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size:  cover;
-        -o-background-size:  cover;
-        height:100%;
-		color: white;
-		text-shadow: 2px 2px #000000;
-		.panel-heading{
-			color: white;
-		}
-	}
-
-	#testimonials{
-		background: url(ski-track_800x400.jpg);
-		background-position: center;
-        background-repeat: no-repeat;
-        background-size:  cover;
-        -webkit-background-size:  cover;
-        -moz-background-size:  cover;
-        -o-background-size:  cover;
-        height:100%;
-		color: white;
-		text-shadow: 2px 2px #000000;
-		.panel-heading{
-			color: white;
-		}
-	}
-
-	#about_us{
-		background: url(bible_800x400.jpg);
-		background-position: center;
-        background-repeat: no-repeat;
-        background-size:  cover;
-        -webkit-background-size:  cover;
-        -moz-background-size:  cover;
-        -o-background-size:  cover;
-        height:100%;
-		color: white;
-		text-shadow: 2px 2px #000000;
-		.panel-heading{
-			color: white;
-		}
-	}
-
-	#blog_panel{
-		background: url(forest_800x400.jpg);
-		background-position: center;
-        background-repeat: no-repeat;
-        background-size:  cover;
-        -webkit-background-size:  cover;
-        -moz-background-size:  cover;
-        -o-background-size:  cover;
-        height:100%;
-		color: white;
-		text-shadow: 2px 2px #000000;
-		.panel-heading{
-			color: white;
-		}
-	}
-
 }
 /* Footer */
 
@@ -427,3 +368,28 @@ footer.footer{
 	float: left;
 }
 
+/* About */
+#about-background{
+	background-color: #2f2f2f;
+}
+#about-header{
+	h1{
+		margin: 0px;
+		padding: 20px 0px;
+		color: white;
+	}
+}
+#about-body{
+	background-image: url('<%= asset_path("walk.jpg") %>');
+	background-position: center;
+	background-size: cover;
+	height: 600px;
+
+}
+#about-body-text{
+	color: white;
+	font-weight: bold;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}

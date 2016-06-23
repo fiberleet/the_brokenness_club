@@ -1,5 +1,7 @@
+
+<% provide(:title, "Home") %>
+
 <div class="container-fluid top-half-page">
-	
 		<div class="center jumbotron">
 		  <h1>
 		  	Face Life Head On
@@ -34,7 +36,7 @@
 			<p class="">
 				The Brokenness Club connects people battling life's toughest challenges with mentors who have been there and made it through. 
 			</p>
-			<%= link_to "Learn More", '#', class: "btn btn-lg btn-primary join-button" %>
+			<%= link_to "Learn More", about_path, class: "btn btn-lg btn-primary join-button" %>
 		</div>
 
 	</div>
@@ -51,7 +53,7 @@
 		<p>
 			There is a time in everyone's life when all the walls come caving in. When waking up in the morning starts the nightmare all over again. Nothing can fix what's happened, but having someone listen and understand can make all the difference. 
 		</p>
-		<%= link_to "Start Now", '#', class: "btn btn-lg btn-primary join-button" %>
+		<%= link_to "Start Now", get_help_path, class: "btn btn-lg btn-primary join-button" %>
 	</div>
 
 </div>
@@ -74,7 +76,7 @@
 			<p>
 				You know that day when everything fell apart and the whole world spun on it's head... People are there, and they need you to show them how to get through.  
 			</p>
-			<%= link_to "Start Now", '#', class: "btn btn-lg btn-primary join-button" %>
+			<%= link_to "Start Now", give_help_path, class: "btn btn-lg btn-primary join-button" %>
 		</div>
 	</div>
 </div>
