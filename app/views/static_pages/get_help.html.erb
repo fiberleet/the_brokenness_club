@@ -1,4 +1,46 @@
 <% provide(:title, "Get Help") %>
+<div class="container-fluid header-container">
+	<div class="container" id="about-header">
+		<h1>Get Help</h1>
+	</div>
+</div>
 
-<h1>StaticPages#get_help</h1>
-<p>Find me in app/views/static_pages/get_help.html.erb</p>
+<div class="container instructions-container">
+	<div class="col-sm-6">
+		<h1>
+			FACE LIFE HEAD ON
+		</h1>
+		<p class="motivation">
+			Get ready to be challenged, to look fear in the eye and find out what you're really made of. You're not the first one to go through this and you can make it through as well.
+		</p>
+		<h5>
+			STEP 1
+		</h5>
+		<h4>
+			Create an account
+		</h4>
+		<%= link_to "Continue", "#", class: "btn btn-lg btn-primary join-button" %>
+
+		<h5>
+			STEP 2
+		</h5>
+		<h4>
+			Fill in your personal details
+		</h4>
+		<p>
+			Your profile is completely confidential to everyone except the mentor you choose in step three. 
+		</p>
+		<%= link_to "Continue", "#", class: "btn btn-lg btn-primary join-button" %>
+
+		<h5>
+			STEP 3
+		</h5>
+		<h4>
+			Choose a mentor
+		</h4>
+		<p>
+			Mentors will be matched to you based on your personal details. You will be able to browse their profiles and choose someone you feel would relate to your situation.
+		</p>
+		<%= link_to "Continue", "#", class: "btn btn-lg btn-primary join-button" %>
+	</div>
+</div>
