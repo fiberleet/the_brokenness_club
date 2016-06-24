@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :clients
+  devise_for :mentors
   root 'home_page#home'
 
   get 'about' => 'static_pages#about'
