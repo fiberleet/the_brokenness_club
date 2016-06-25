@@ -4,15 +4,16 @@
 /* Navbar */
 body {
     background-color: #edefed;
+    margin-top: 50px;
 }
 
-.navbar.navbar-static-top{
+.navbar.navbar-fixed-top{
 	background-color: rgba(0,0,0, 0.5);
 	border-bottom-width: 1px;
 	border-color: white;
 	color: white;
 	height: 50px;
-	margin-bottom: 0px;
+	margin-bottom: 0;
 	.navbar-brand{
 		font-family: 'Archivo Narrow', sans-serif;
 		font-weight: bold;
@@ -25,16 +26,21 @@ body {
 		color: #685195;
 	}
 }
+
+@media screen and (max-width: 768px) {
+	.navbar-collapse{
+		background-color: black;
+	}
+}
 #nav-list{
 	margin: 0px;
-}
-#log-in-button{
-	color: white;
-	float: right;
-	padding: 15px;
-}
-#log-in-button:hover{
-	color: #685195;
+	a{
+		color: white;
+
+	}
+	a:hover{
+		color: #685195;
+	}
 }
 
 #logo{
@@ -42,6 +48,12 @@ body {
 	width: 55px;
 	padding-right: 5px;
 }
+
+.dropdown-menu{
+	background-color: black;
+	border: none;
+}
+
 /* Home Page */
 p{
 	font-family: 'Slabo 27px', serif;
@@ -56,9 +68,9 @@ p{
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        height:100%;
-    margin-top: -100px;
-    padding-top: 200px;
+        height: 600px;
+    margin-top: -50px;
+    padding-top: 150px;
     border-bottom-width: 3px;
     border-bottom-color: #685195;
     border-bottom-style: solid;
@@ -392,6 +404,8 @@ footer.footer{
 	position: relative;
   	top: 50%;
   	transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	-webkit-transform: translateY(-50%);
 }
 
 /* Get Help */
@@ -420,3 +434,21 @@ footer.footer{
 		padding-bottom: 20px;
 	}
 }
+
+/* Forms */
+.sign-up-form{
+	max-width: 700px;
+	margin: auto;
+}
+
+.alert-alert {
+  @extend .alert-warning;
+}
+
+.alert-notice {
+  @extend .alert-info;
+  margin-bottom: 0;
+  position: absolute;
+  width: inherit;
+}
+
