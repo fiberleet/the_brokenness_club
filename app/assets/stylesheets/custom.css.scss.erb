@@ -68,7 +68,7 @@ p{
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        height: 600px;
+        min-height: 600px;
     margin-top: -50px;
     padding-top: 150px;
     border-bottom-width: 3px;
@@ -377,7 +377,7 @@ footer.footer{
 
 /* Debug */
 .debug_dump{
-	float: left;
+	margin: auto;
 }
 
 /* About */
@@ -435,6 +435,11 @@ footer.footer{
 	}
 }
 
+#done{
+	color: green;
+	font-size: 25px;
+}
+
 /* Forms */
 .sign-up-form{
 	max-width: 700px;
@@ -462,7 +467,12 @@ footer.footer{
 .alert-notice {
   @extend .alert-info;
   margin-bottom: 0;
+  margin-left: -200px;
+  top: 50px;
+  left: 50%;
+  width: 400px;
   position: absolute;
-  width: inherit;
 }
+
+
 

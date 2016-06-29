@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations"}
 
   root 'home_page#home'
 
@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'get_help' => 'static_pages#get_help'
 
   get 'give_help' => 'static_pages#give_help'
+
+  resources :users, :only => [:index]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
