@@ -17,7 +17,7 @@
 			STEP 1
 		</h5>
 		<h4>
-			Create an account
+			Create and activate your account
 		</h4>
 		<% if user_signed_in? %>
 			<p id="done"><span class="glyphicon glyphicon-ok"></span>Done</p>
@@ -34,7 +34,7 @@
 			Your profile is completely confidential to everyone except the mentor you choose in step three. 
 		</p>
 		<% if user_signed_in? %>
-			<%= link_to "Continue", "#", class: "btn btn-primary" %>
+			<%= link_to "Continue", edit_profile_path(current_user), class: "btn btn-primary" %>
 		<% end %>
 		<h5>
 			STEP 3
