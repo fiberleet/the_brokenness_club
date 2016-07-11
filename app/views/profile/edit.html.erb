@@ -11,16 +11,18 @@
 		  <% if current_user.has_role? :mentor %>
 		  	<p> Your story will be shared with those who may choose you as their mentor as well as other mentors in your category. </p>
 		  <% else %>
-		  	<p> Your story will only be shared with the mentor you choose. </p>
+		  	<p> Your story will only be shared with the mentor you choose. <br />
+		  		 </p>
 		  <% end %>
 
-		  <%= f.label :birthday, 'Birth Date' %><br />
-		  <%= f.date_select :birthday, :start_year => 1900, :end_year => Date.current.year, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }, class: 'form-control' %> <br />
+		  
 
 		  <% if current_user.has_role? :mentor %>
 		  	<%= f.label :max_clients, 'Maximum Number of Clients' %><br />
 		  	<%= f.number_field :max_clients, in: 1..10, class: 'form-control' %>
+		  	<p> Please only choose the number of clients you can devote full attention to at any time. </p>
 		  <% end %>
+		  
 
 		</div>
 		<div class="required">
@@ -28,6 +30,11 @@
 		    <%= f.fields_for :address do |j| %>
 		    	<%= render :partial => 'devise/shared/address', :locals => {:f => j} %>
 		    <% end %>
+
+		    <%= f.label :birthday, 'Birth Date' %><br />
+		    <%= f.date_select :birthday, :start_year => 1900, :end_year => Date.current.year, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }, class: 'form-control' %> <br />
+		    <%= f.label :gender, 'I Am' %><br />
+		    <%= f.select :gender, ["Male", "Female"], :prompt => "Gender" %>
 		</div>
 	       <%= f.submit "Update", class: "btn btn-primary" %>
       </div>

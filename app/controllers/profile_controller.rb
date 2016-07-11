@@ -43,7 +43,7 @@ class ProfileController < ApplicationController
 		end
 
 		def profile_params
-			params.require(:profile).permit(:configured, :birthday, :story, :max_clients, address_attributes: 
+			params.require(:profile).permit(:configured, :birthday, :story, :max_clients, :gender, address_attributes: 
 				[:id, :street_address, :apt_suite_building, :city, :state, :zip])
 		end
 end

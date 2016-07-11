@@ -19,7 +19,11 @@
 		<h4>
 			Create an account
 		</h4>
-		<%= link_to "Continue", new_user_registration_path, class: "btn btn-primary" %>
+		<% if user_signed_in? %>
+			<p id="done"><span class="glyphicon glyphicon-ok"></span>Done</p>
+		<% else %>
+			<%= link_to "Continue", new_user_registration_path, class: "btn btn-primary" %>
+		<% end %>
 
 		<h5>
 			STEP 2
@@ -30,8 +34,9 @@
 		<p>
 			Your name, profile picture and story will be shared with people looking for help in the same issues that you have been through, as well as other mentors in your categories. 
 		</p>
-		<%= link_to "Continue", "#", class: "btn btn-primary" %>
-
+		<% if user_signed_in? %>
+			<%= link_to "Continue", edit_profile_path(current_user), class: "btn btn-primary" %>
+		<% end %>
 		<h5>
 			STEP 3
 		</h5>
