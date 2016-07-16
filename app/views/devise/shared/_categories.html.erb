@@ -1,0 +1,9 @@
+<h4>Choose the categories you would like to be associated with.</h4>
+
+<div class="form-group col-xs-12">
+  <%= f.label :subcategory_ids, "Categories" %><br />
+  <%= f.grouped_collection_select :subcategory_ids, Category.order(:name), 
+  						:subcategories, :name, :id, :name, {}, 
+  						{:multiple => true, class: "form-control"}%>
+</div>
+ 

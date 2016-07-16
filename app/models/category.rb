@@ -1,6 +1,5 @@
 class Category < ActiveRecord::Base
-	has_many :Profiles
-	has_many :Subcategories
+	has_many :subcategories
 
 	validates_presence_of :name
 end

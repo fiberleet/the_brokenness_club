@@ -6,22 +6,30 @@
   	  <div class="form-group">
 	    <div class = "required col-xs-12">
 	      <h2>Required</h2>
+	      <% if current_user.has_role? :mentor %>
+	      	<%= render :partial => 'devise/shared/categories', :locals => {:f => f} %>
+	      <% end %>
+
+	      <div class = "col-xs-12">
 		  <%= f.label :story, 'Your Story' %><br />
 		  <%= f.text_area :story, class: 'form-control' %>
+		  
 		  <% if current_user.has_role? :mentor %>
 		  	<p> Your story will be shared with those who may choose you as their mentor as well as other mentors in your category. </p>
 		  <% else %>
 		  	<p> Your story will only be shared with the mentor you choose. <br />
 		  		 </p>
 		  <% end %>
+		  </div>
 
 		  
-
+		  <div class = "col-xs-12">
 		  <% if current_user.has_role? :mentor %>
 		  	<%= f.label :max_clients, 'Maximum Number of Clients' %><br />
 		  	<%= f.number_field :max_clients, in: 1..10, class: 'form-control' %>
 		  	<p> Please only choose the number of clients you can devote full attention to at any time. </p>
 		  <% end %>
+		  </div>
 		  
 
 		</div>

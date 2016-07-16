@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   rolify
-	has_one :profile
+	has_one :profile, dependent: :destroy
 	before_create :build_profile
 	
 	accepts_nested_attributes_for :profile

@@ -1,0 +1,21 @@
+<div class = "container">
+	<h1> Categories Index </h1>
+	<table class = "table">
+		<% @categories.each do |category| %> 
+			<tr>
+				<td><strong><%= category.name %></strong></td>
+				<td><%= link_to "New subcategory", new_category_subcategory_path(category) %></td>
+				<td><%= link_to "Edit", edit_category_path(category) %></td>
+				<td><%= link_to "Delete", category_path(category), method: "delete" %></td>
+			</tr>
+			<tr><% category.subcategories.each do |subcategory| %></tr>
+				<td>  -->  </td>
+				<td><%= subcategory.name %></td>
+				<td><%= link_to "Edit", edit_category_subcategory_path(category, subcategory) %></td>
+				<td><%= link_to "Delete", category_subcategory_path(category, subcategory), method: "delete" %></td>
+			<% end %>
+
+		<% end %>
+	</table>
+	<%= link_to "New Category", new_category_path, class: "btn btn-primary" %>
+</div>

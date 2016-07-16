@@ -17,7 +17,6 @@ class ProfileController < ApplicationController
 	end
 
 	def create
-		debugger
 		@profile = current_user.build_profile(profile_params)
 	end
 
@@ -32,7 +31,6 @@ class ProfileController < ApplicationController
 			redirect_to edit_profile_path(current_user)
 		end
 	end
-
 	private
 	
 		def require_login
@@ -44,6 +42,6 @@ class ProfileController < ApplicationController
 
 		def profile_params
 			params.require(:profile).permit(:configured, :birthday, :story, :max_clients, :gender, address_attributes: 
-				[:id, :street_address, :apt_suite_building, :city, :state, :zip])
+				[:id, :street_address, :apt_suite_building, :city, :state, :zip], subcategory_ids: [])
 		end
 end

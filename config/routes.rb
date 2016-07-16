@@ -16,6 +16,10 @@ Rails.application.routes.draw do
 
   resources :role, :only => [ :show, :update ]
 
+  resources :categories, :except => [ :show ] do
+    resources :subcategories, :except => [ :index, :show ]
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

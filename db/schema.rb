@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160711153411) do
+ActiveRecord::Schema.define(version: 20160715213615) do
 
   create_table "addresses", force: :cascade do |t|
     t.datetime "created_at",         null: false
@@ -34,21 +34,26 @@ ActiveRecord::Schema.define(version: 20160711153411) do
     t.string   "name"
   end
 
-  create_table "profiles", force: :cascade do |t|
+  create_table "categorizations", id: false, force: :cascade do |t|
+    t.integer  "subcategory_id"
+    t.integer  "profile_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+  end
+
+  add_index "categorizations", ["profile_id"], name: "index_categorizations_on_profile_id"
+  add_index "categorizations", ["subcategory_id"], name: "index_categorizations_on_subcategory_id"
+
+  create_table "profiles", force: :cascade do |t|
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
     t.boolean  "configured"
     t.text     "story"
     t.date     "birthday"
     t.integer  "max_clients"
     t.string   "gender"
-    t.integer  "category_id"
-    t.integer  "subcategory_id"
   end
-
-  add_index "profiles", ["category_id"], name: "index_profiles_on_category_id"
-  add_index "profiles", ["subcategory_id"], name: "index_profiles_on_subcategory_id"
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
