@@ -1,7 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  User_id: 
-
-two:
-  User_id: 
+mentor_user_profile:
+  User: mentor_user
+  configured: true
+  birthday: "1960-08-04"
+  story: "Hello World"
+  max_clients: 5
+  profile_country: "United States"
+  profile_state: "Kentucky"
+  gender: "Male"
+  
+  

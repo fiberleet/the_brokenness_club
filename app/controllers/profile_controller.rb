@@ -3,17 +3,17 @@ class ProfileController < ApplicationController
 	def edit
 		@profile = current_user.profile
 		@address = @profile.address
-		unless current_user.has_any_role? :student, :mentor
-			flash.now[:notice] = "Please select a role"
-			render "role/show"
-		end
 
 	end
 
 	def update
 		@profile = current_user.profile
-		@profile.update(profile_params)
-		redirect_to profile_path(current_user)
+		@profile.current_user = current_user
+		if @profile.update(profile_params)
+			redirect_to profile_path(current_user)
+		else
+			render 'edit'
+		end
 	end
 
 	def create
@@ -41,7 +41,7 @@ class ProfileController < ApplicationController
 		end
 
 		def profile_params
-			params.require(:profile).permit(:configured, :birthday, :story, :max_clients, :gender, address_attributes: 
+			params.require(:profile).permit(:configured, :birthday, :story, :max_clients, :profile_country, :profile_state, :gender, address_attributes: 
 				[:id, :street_address, :apt_suite_building, :city, :state, :zip], subcategory_ids: [])
 		end
 end

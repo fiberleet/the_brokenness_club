@@ -5,11 +5,17 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 gem 'bootstrap-sass'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '>= 5.0.4'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+
+gem 'compass-rails', '>= 2.0.4'
+
+gem 'chosen-rails', '>= 1.4'
+
+gem 'country_state_select', '3.0.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -30,6 +36,10 @@ gem 'bcrypt'
 gem 'devise'
 
 gem 'rolify'
+
+gem 'simple_form', '>=3.2.1'
+
+gem 'pg'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -40,7 +50,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'spring'
-  gem 'sqlite3'
   gem 'guard-minitest'
   gem 'guard'
 end
@@ -54,7 +63,6 @@ group :test do
 end
 
 group :production do 
-	gem 'pg'
 	gem 'rails_12factor'
 end
 

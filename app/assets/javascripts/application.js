@@ -13,7 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.turbolinks
+//= require chosen-jquery
 //= require bootstrap
 //= require turbolinks
-//= require_tree .
 //= require multi-select
+//= require country_state_select
+//= require_tree .
+

@@ -1,0 +1,17 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://coffeescript.org/
+
+$ ->
+
+	userRoles = $("#profile_subcategory_ids").data("role")
+	if userRoles.includes("mentor")
+		$("#give-help-btn").css({"color": "green", "border-color": "green"})
+		$('#give-help-btn').prepend('<span class="glyphicon glyphicon-ok"></span>') 
+	if userRoles.includes("student")
+		$("#get-help-btn").css({"color": "green", "border-color": "green"})
+		$('#get-help-btn').prepend('<span class="glyphicon glyphicon-ok"></span>')
+
+	$("#profile_subcategory_ids").multiSelect()
+
+	CountryStateSelect({ chosen_ui: true, chosen_options: { disable_search_threshold: 10, width: '95%' }, country_id: "profile_profile_country", state_id: "profile_profile_state", city_id: "location_test_city", city_place_holder: "Please select city", state_place_holder: 'Please select state' })

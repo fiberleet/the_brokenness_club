@@ -5,7 +5,16 @@ class RoleController < ApplicationController
 	end
 
 	def update
-		current_user.add_role params[:role]
+		unless params[:role] == "student" || "mentor"
+			flash.now[:danger] = "You don't have permission to do that."
+			redirect_to root_path
+		end
+		
+		if current_user.has_role? params[:role]
+			current_user.remove_role params[:role]
+		else
+			current_user.add_role params[:role]
+		end
 		redirect_to edit_profile_path
 	end
 

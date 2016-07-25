@@ -8,7 +8,7 @@ class SubcategoriesController < ApplicationController
 	end
 
 	def destroy
-		subcategory.delete(params[:id])
+		Subcategory.delete(params[:id])
 		redirect_to categories_path
 	end
 
