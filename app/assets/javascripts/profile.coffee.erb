@@ -5,12 +5,18 @@
 $ ->
 
 	userRoles = $("#profile_subcategory_ids").data("role")
+	$("#mentor-settings").hide()
 	if userRoles.includes("mentor")
+		$("#mentor-settings").show()
 		$("#give-help-btn").css({"color": "green", "border-color": "green"})
-		$('#give-help-btn').prepend('<span class="glyphicon glyphicon-ok"></span>') 
+		$('#give-help-btn').text('Giving Help')
+		$('#give-help-btn').prepend('<span class="glyphicon glyphicon-ok"></span>')
+
 	if userRoles.includes("student")
 		$("#get-help-btn").css({"color": "green", "border-color": "green"})
+		$('#get-help-btn').text('Getting Help')
 		$('#get-help-btn').prepend('<span class="glyphicon glyphicon-ok"></span>')
+		
 
 	$("#profile_subcategory_ids").multiSelect()
 

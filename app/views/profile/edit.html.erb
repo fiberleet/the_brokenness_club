@@ -17,22 +17,12 @@
 			</div>
 		</div>
 
-		<%= f.input :subcategory_ids,
-			required: true,
-			as: :grouped_select,
-			:collection => Category.order(:name),
-			group_method: :subcategories,
-			input_html: { :multiple => true, :data => { :role => current_user.roles.collect { |f| f.name } } },
-			hint: "Choose the categories you are prepared to be a mentor for.",
-			label: "Categories" %>
-
 		<% if current_user.has_role? :mentor %>
 			<%= f.input :story, label: "Your Story", class: 'form-control', hint: "Your story will be shared with those who may choose you as their mentor." %>
 		<% else %>
 			<%= f.input :story, label: "Your Story", class: 'form-control', hint: "Your story will only be shared with the mentor(s) you choose." %>
 		<% end %>
-		
-		<%= f.input :max_clients, in: 1..10, label: "Maximum Number of Clients", class: 'form-control', hint: "Please only choose the number of clients you can devote full attention to." %>
+
 		<div class = "form-group">
 			<h4 class = "col-sm-2 label-header"><abbr title="required">*</abbr> Where you live </h4>
 			<%= f.input :profile_country, 
@@ -49,6 +39,22 @@
 				field_names:  { :country => :profile_country, :state => :home_state }, 
 				input_html:   { :"data-placeholder" => "Choose a State / Province..." }, 
 				wrapper_html: { :class => 'col-sm-5' } ) %>
+		</div>
+
+		<div class = "sub-form" id="mentor-settings"><h2>Mentor Settings</h2>
+			<%= f.input :subcategory_ids,
+				required: true,
+				as: :grouped_select,
+				:collection => Category.order(:name),
+				group_method: :subcategories,
+				input_html: { :multiple => true, :data => { :role => current_user.roles.collect { |f| f.name } } },
+				hint: "Choose the categories you are prepared to be a mentor for.",
+				label: "Categories" %>
+
+
+			
+			<%= f.input :max_clients, in: 1..10, label: "Maximum Number of Clients", class: 'form-control', hint: "Please only choose the number of clients you can devote full attention to.", required: true %>
+
 		</div>
 
 		<h2> Optional </h2>
