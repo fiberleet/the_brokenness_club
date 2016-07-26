@@ -3,12 +3,15 @@ class ProfileController < ApplicationController
 	def edit
 		@profile = current_user.profile
 		@address = @profile.address
-
+		@countries_collection = CountryStateSelect.countries_collection
+		@countries_collection.delete_if { |x| x[0] == "United States"}
+		@countries_collection.unshift(["United States", :US])
 	end
 
 	def update
 		@profile = current_user.profile
 		@profile.current_user = current_user
+
 		if @profile.update(profile_params)
 			redirect_to profile_path(current_user)
 		else

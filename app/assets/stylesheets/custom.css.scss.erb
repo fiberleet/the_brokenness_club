@@ -60,6 +60,15 @@ p{
 	font-size: 20px;
 	text-align: left;
 }
+.font-center{
+	text-align: center;
+}
+.font-black{
+	color: black;
+}
+.font-white{
+	color: white;
+}
 .top-half-page{
 	background: url('<%= asset_path("coverphoto2.jpg") %> ');
         background-position: center;
@@ -148,32 +157,35 @@ p{
 	text-align: center;
 	color: black;
 }
-h2{
-	padding-top: 70px;
-	font-weight: bold;
-	width: 100%; 
-	text-align: center; 
-	border-bottom: 1px solid #000; 
-	line-height: 0.1em;
-	margin: 10px 0 30px;
+.form-header {
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 50px;
 }
-h2 span { 
-    background:#F2F4FF; 
-    padding:0 10px; 
+.home-header{
+	padding-top: 0px;
 }
-h5{
-	margin: auto;
-	width: 50%;
-	padding: 20px;
-	line-height: 1.2em;
+.form-header:before,
+.form-header:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
 }
-@media screen and (max-width: 767px) {
-	h5{
-		margin: auto;
-		width: 80%;
-		padding: 20px;
-	}
+.form-header:before {
+    right: 0.5em;
+    margin-left: -50%;
 }
+.form-header:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+
 /* Mission */
 .btn{
 	background-color: transparent;
@@ -198,6 +210,15 @@ h5{
 	color: black;
 }
 
+.section-description{
+	padding: 20px 20px;
+	text-align: left;
+	font-size: 18px;
+}
+.section-description-center{
+	font-size: 18px;
+}
+
 #section-1{
 	padding: 20px;
 	max-width: 1170px;
@@ -212,16 +233,14 @@ h5{
 		background-position: center;
 		background-size: cover;
 	}
-	p{
-		padding: 20px 20px;
-		text-align: left;
-		font-size: 18px;
-	}
-	h1{
+
+	h2{
 		font-weight: bold;
 		font-size: 30px;
+		padding-top: 0;
 	}
 }
+
 
 @media screen and (max-width: 767px) {
 	#section-1{
@@ -253,48 +272,64 @@ h5{
 
 /* Reach Out */
 #get-help{
-	padding: 0px;
-	padding-top: 20px;
+	margin-top: 20px;
+	padding: 20px;
 	text-align: center;
-	p{
+	background-color: white;
+
+	.picture-text{
 		width: 75%;
 		margin: auto;
-		color: white;
 		font-size: 20px;
 		padding: 30px;
 	}
 	.btn{
-		border-color: white;
-		color: white;
+		margin-bottom: 10px;
 	}
+
 	.btn:hover{
 		border-color: #685195;
 	}
 }
 #umbrella{
-	height: 600px;
-	width: 60%;
-	margin: auto;
-	background-image: url('<%= asset_path("umbrella-170962_1920.jpg") %>');
-	background-position: center;
-	background-size: cover;
-}
+	height: 500px;
 
+	background-image: url('<%= asset_path("umbrella-170962_1920.jpg") %>');
+	background-position: center bottom;
+	background-size: cover;
+	.picture-text{
+		padding-top: 83px;
+	}
+}
 @media screen and (max-width: 767px) {
+	#get-help{
+		padding: 0;
+	}
 	#umbrella{
-	 	width: 100%;
-	 	p{
-	 		width: 90%;
-	 	}
+		padding: 0;
+		.picture-text{
+			width: 90%;
+		}
+
 	}
 }
 
 #give-help{
+	h5{
+		margin: auto;
+		width: 50%;
+		padding: 20px;
+		line-height: 1.2em;
+	}
+	@media screen and (max-width: 767px) {
+		h5{
+			margin: auto;
+			width: 80%;
+			padding: 20px;
+		}
+	}
 	padding-top: 20px;
 	text-align: center;
-	h2{
-		font-weight: bold;
-	}
 }
 
 #worried-girl{
@@ -450,11 +485,24 @@ footer.footer{
 }
 
 /* Forms */
+.full-screen-background{
+	background: url('<%= asset_path("train-tracks.jpeg") %> ');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 600px;
+    margin-top: -50px;
+    padding-top: 50px;
+
+}
 .sign-up-form{
 	max-width: 800px;
 	padding: 0px 30px;
 	margin: auto;
-	background-color: white;
+	background-color: rgba(255,255,255,.80);
 	height: auto;
 	.sub-form{
 		border-style: solid;
@@ -549,10 +597,12 @@ footer.footer{
 .alert-notice {
   @extend .alert-info;
   margin-bottom: 0;
-  margin-left: -200px;
+  margin-left: auto;
+  margin-right: auto;
   top: 50px;
-  left: 50%;
-  width: 400px;
+  left: 0;
+  right: 0;
+  max-width: 400px;
   position: absolute;
 }
 

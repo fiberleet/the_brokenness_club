@@ -26,47 +26,54 @@
 </div>
 
 <div class="container" id="section-1">
-	
-	<div class="col-sm-8 col-xs-12" id="shuttle">
+	<div class="col-sm-8">
+		<div class="col-sm-12" id="shuttle">
+		</div>
 	</div>
-	<div class="" id="mission-text">
-		<h1 class="col-sm-4 col-xs-12">
+	<div class="col-sm-4">
+		<h2 class="col-sm-12 form-header">
 			Mission
-		</h1>
-		<div class="col-sm-4 col-xs-12">
-			<p class="">
+		</h2>
+	</div>
+	<div class="col-sm-4">
+		<div class="col-sm-12">
+			<p class="section-description">
 				The Brokenness Club connects people battling life's toughest challenges with mentors who have been there and made it through. 
 			</p>
 			<%= link_to "Learn More", about_path, class: "btn btn-lg btn-primary join-button" %>
 		</div>
-
 	</div>
 </div>
 
 <div class="container" id="get-help">
-	<h2>
-		<span>Get Help</span>
-	</h2>
-	<h5>
-		Mentors are ready and willing to listen to you. To leave judgement at the door and give you the caring support that you need.
-	</h5>
-	<div class="get-help" id="umbrella">
-		<p>
-			There is a time in everyone's life when all the walls come caving in. When waking up in the morning starts the nightmare all over again. Nothing can fix what's happened, but having someone listen and understand can make all the difference. 
+	<div class="col-sm-4">
+		<h2 class="col-sm-12 form-header home-header">
+			Get Help
+		</h2>
+
+		<p class="col-sm-12 font-black section-description">
+			Mentors are ready and willing to listen to you. To leave judgement at the door and give you the caring support that you need.
 		</p>
 		<%= link_to "Start Now", get_help_path, class: "btn btn-lg btn-primary join-button" %>
 	</div>
 
+	<div class="col-sm-8" id="umbrella">
+		<div class="get-help col-sm-12">
+			<p class="font-white picture-text">
+				There is a time in everyone's life when all the walls come caving in. When waking up in the morning starts the nightmare all over again. Nothing can fix what's happened, but having someone listen and understand can make all the difference. 
+			</p>
+		</div>
+	</div>
 </div>
 
 <div class="container" id="give-help">
 	<div class="col-xs-12">
-		<h2>
-			<span>Give Help</span>
+		<h2 class="form-header home-header">
+			Give Help
 		</h2>
-		<h5>
+		<p class="font-center section-description-center">
 			Connect with others who are struggling on the path you have been down.
-		</h5>
+		</p>
 
 	</div>
 
@@ -81,6 +88,3 @@
 		</div>
 	</div>
 </div>
-
-
-<!--<%= render 'layouts/panel_info' %>-->
