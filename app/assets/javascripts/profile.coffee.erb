@@ -4,8 +4,8 @@
 
 
 $( document ).on 'turbolinks:load', ->
-	alert(jQuery)   
 	userRoles = $("#profile_subcategory_ids").data("role")
+	$("#give-help-btn").css({"color": "green", "border-color": "green"})
 	$("#mentor-settings").hide()
 	if userRoles.includes("mentor")
 		$("#mentor-settings").show()
