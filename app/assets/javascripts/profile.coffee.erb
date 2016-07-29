@@ -4,7 +4,7 @@
 
 
 $( document ).on 'turbolinks:load', ->
-	alert("test!!")
+	alert(jQuery)   
 	userRoles = $("#profile_subcategory_ids").data("role")
 	$("#mentor-settings").hide()
 	if userRoles.includes("mentor")
