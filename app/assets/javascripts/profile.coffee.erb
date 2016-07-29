@@ -5,15 +5,14 @@
 
 $( document ).on 'turbolinks:load', ->
 	userRoles = $("#profile_subcategory_ids").data("role")
-	alert("mentor,student".includes("mentor"))
-
-	if userRoles.includes("mentor")
+	$("#mentor-settings").hide()
+	if /mentor/.test(userRoles)
 		$("#mentor-settings").show()
 		$("#give-help-btn").css({"color": "green", "border-color": "green"})
 		$('#give-help-btn').text('Giving Help')
 		$('#give-help-btn').prepend('<span class="glyphicon glyphicon-ok"></span>')
 
-	if userRoles.includes("student")
+	if /student/.test(userRoles)
 		$("#get-help-btn").css({"color": "green", "border-color": "green"})
 		$('#get-help-btn').text('Getting Help')
 		$('#get-help-btn').prepend('<span class="glyphicon glyphicon-ok"></span>')
