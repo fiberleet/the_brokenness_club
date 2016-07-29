@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :profile, :only => [ :show, :edit, :update ]
 
-  resources :role, :only => [ :show, :update ]
+  resources :role, :only => [ :update ]
 
   resources :categories, :except => [ :show ] do
     resources :subcategories, :except => [ :index, :show ]

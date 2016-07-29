@@ -42,6 +42,8 @@
 					wrapper_html: { :class => 'col-sm-5' } ) %>
 			</div>
 
+			<%= f.input :age, in: 1..120, label: "Age", class: 'form-control'%>
+
 			<div class = "sub-form" id="mentor-settings"><h2>Mentor Settings</h2>
 				<%= f.input :subcategory_ids,
 					required: true,

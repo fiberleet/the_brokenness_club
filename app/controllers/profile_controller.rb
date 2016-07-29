@@ -13,6 +13,8 @@ class ProfileController < ApplicationController
 		@profile.current_user = current_user
 
 		if @profile.update(profile_params)
+			@profile.configured = true
+			@profile.save
 			redirect_to profile_path(current_user)
 		else
 			render 'edit'
@@ -44,7 +46,7 @@ class ProfileController < ApplicationController
 		end
 
 		def profile_params
-			params.require(:profile).permit(:configured, :birthday, :story, :max_clients, :profile_country, :profile_state, :gender, address_attributes: 
+			params.require(:profile).permit(:configured, :birthday, :story, :max_clients, :profile_country, :profile_state, :age, :gender, address_attributes: 
 				[:id, :street_address, :apt_suite_building, :city, :state, :zip], subcategory_ids: [])
 		end
 end

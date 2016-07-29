@@ -7,7 +7,7 @@ class Profile < ActiveRecord::Base
   accepts_nested_attributes_for :address, :subcategories
   attr_accessor :current_user
 
-  validates_presence_of :profile_country, :profile_state, :story, :presence => true
+  validates_presence_of :profile_country, :profile_state, :story, :age, :presence => true
 
   validates_presence_of :subcategories, :max_clients, :presence => true, :if => :validate_mentor?
 
