@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   rolify
+  mount_uploader :avatar, AvatarUploader
 	has_one :profile, dependent: :destroy
 	before_create :build_profile
 	

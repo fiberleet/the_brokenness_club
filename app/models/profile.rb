@@ -1,5 +1,6 @@
 class Profile < ActiveRecord::Base
   belongs_to :User
+  mount_uploader :avatar, AvatarUploader
   has_many :categorizations
   has_many :subcategories, through: :categorizations
   before_create :build_address

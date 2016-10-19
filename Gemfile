@@ -16,6 +16,8 @@ gem 'compass-rails', '>= 2.0.4'
 gem 'chosen-rails', '>= 1.4'
 
 gem 'country_state_select', '3.0.2'
+
+gem 'country_select'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -40,6 +42,16 @@ gem 'rolify'
 gem 'simple_form', '>=3.2.1'
 
 gem 'pg'
+
+gem 'figaro'
+
+gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
+
+gem 'carrierwave-aws'
+
+gem 'mini_magick'
+
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

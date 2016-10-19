@@ -8,7 +8,9 @@ default: &default
   adapter: postgresql
   pool: 5
   timeout: 5000
-
+  host: localhost
+  username: the_brokenness_club
+  password: theone
 development:
   <<: *default
   database: db/broken_db_development

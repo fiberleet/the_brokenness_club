@@ -62,6 +62,7 @@
 
 			<h2> Optional </h2>
 			
+			<%= f.input :avatar, as: :file, :label => "Change your profile picture" %>
 
 			<%= f.simple_fields_for :address do |j| %>
 				<%= render :partial => 'devise/shared/address', :locals => {:f => j} %>

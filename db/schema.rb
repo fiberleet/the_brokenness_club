@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160726173716) do
+ActiveRecord::Schema.define(version: 20161019130250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,9 +46,9 @@ ActiveRecord::Schema.define(version: 20160726173716) do
   add_index "categorizations", ["subcategory_id"], name: "index_categorizations_on_subcategory_id", using: :btree
 
   create_table "profiles", force: :cascade do |t|
+    t.integer  "user_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.integer  "user_id"
     t.boolean  "configured"
     t.text     "story"
     t.date     "birthday"
@@ -58,7 +58,10 @@ ActiveRecord::Schema.define(version: 20160726173716) do
     t.string   "profile_state"
     t.string   "profile_city"
     t.integer  "age"
+    t.string   "avatar"
   end
+
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
@@ -118,4 +121,6 @@ ActiveRecord::Schema.define(version: 20160726173716) do
 
   add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
 
+  add_foreign_key "profiles", "users"
+  add_foreign_key "users", "users"
 end
