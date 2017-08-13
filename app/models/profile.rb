@@ -1,4 +1,4 @@
-class Profile < ActiveRecord::Base
+class Profile < ApplicationRecord
   belongs_to :User
   mount_uploader :avatar, AvatarUploader
   has_many :categorizations

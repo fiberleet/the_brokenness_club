@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord 
   rolify
   mount_uploader :avatar, AvatarUploader
 	has_one :profile, dependent: :destroy

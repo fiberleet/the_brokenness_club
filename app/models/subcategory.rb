@@ -1,4 +1,4 @@
-class Subcategory < ActiveRecord::Base
+class Subcategory < ApplicationRecord
   has_many :categorizations
   has_many :profiles, through: :categorizations
   belongs_to :category

@@ -2,21 +2,21 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '5.1.2'
 gem 'bootstrap-sass'
-# Use SCSS for stylesheets
-gem 'sass-rails', '>= 5.0.4'
+# Use SCSS for stylesheet
+gem 'sass-rails', '~> 5.0'
+gem 'sprockets-rails', '~> 3.2' 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails'
 
-gem 'compass-rails', '>= 2.0.4'
+gem 'compass-rails'
 
-gem 'chosen-rails', '>= 1.4'
+gem 'chosen-rails'
 
-gem 'country_state_select', '3.0.2'
-
+gem 'country_state_select', :git => 'git://github.com/arvindvyas/Country-State-Select' 
 gem 'country_select'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
