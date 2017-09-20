@@ -1,0 +1,14 @@
+//= link_tree ../images
+//= link_directory ../javascripts .js
+//= link_directory ../stylesheets .css
+//= require jquery
+//= require jquery.turbolinks
+//= require jquery_ujs
+//= require chosen-jquery
+//= require bootstrap
+//= require multi-select
+//= require country_state_select
+//= require_tree .
+//= require turbolinks
+//= require chosen-compass
+//= require chosen
