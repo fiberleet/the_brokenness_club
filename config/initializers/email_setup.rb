@@ -1,10 +1,12 @@
 ActionMailer::Base.delivery_method = :smtp
+
 ActionMailer::Base.smtp_settings = {
-  address:              'smtp.gmail.com',
+  address:              'smtp.sendgrid.net',
   port:                 587,
   domain:               'young-peak-26712.herokuapp.com',
-  user_name:            ENV["GMAIL_USERNAME"],
-  password:             ENV["GMAIL_PASSWORD"],
+  user_name:            ENV["SENDGRID_USERNAME"],
+  password:             ENV["SENDGRID_PASSWORD"],
   authentication:       'plain',
   enable_starttls_auto: true 
 }
+
